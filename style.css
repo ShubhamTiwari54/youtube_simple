@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+
+    background-image: url(img/banner.jpg);
+    height: 80vh;
+    width: auto;
+    background-position: center center ;
+    background-repeat: no-repeat;
+}
+.main .box {
+    height: 80vh;
+    width: auto;
+    opacity: 0.44;
+    background-color: black;
+
+}
+.intro{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+nav{
+    max-width: 80vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+   
