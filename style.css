@@ -1,4 +1,7 @@
-/* Reset */
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,21 +9,21 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Background */
+
 .main {
     position: relative;
     height: 100vh;
     background: url("img/banner.jpg") center/cover no-repeat;
 }
 
-/* Dark overlay */
+
 .main .box {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.6);
 }
 
-/* Navbar */
+
 .navbar {
     position: relative;
     z-index: 2;
@@ -37,12 +40,12 @@
     align-items: center;
 }
 
-/* Logo */
+
 .logo img {
     width: 150px;
 }
 
-/* Right side */
+
 .sign-in {
     display: flex;
     align-items: center;
@@ -58,8 +61,9 @@
     font-weight: 400;
     font-size: medium;
 }
-.sign-in select:hover{
-    box-shadow: ;
+
+.sign-in select:hover {
+    scale: 1.05;
 }
 
 .sign-in option {
@@ -73,16 +77,17 @@
     padding: 7px 16px;
     border-radius: 3px;
     cursor: pointer;
-    font-weight:400;
+    font-weight: 400;
     font-size: medium;
 
 }
 
 .sign-in button:hover {
     background-color: #cc000a;
+    scale: 1.05;
 }
 
-/* Hero text */
+
 .intro {
     position: relative;
     z-index: 2;
@@ -98,12 +103,12 @@
     gap: 14px;
 }
 
-/* Reset paragraph margins */
+
 .intro p {
     margin: 0;
 }
 
-/* Text sizes */
+
 #h1 {
     font-size: 3.5rem;
     font-weight: 900;
@@ -118,7 +123,7 @@
     max-width: 600px;
 }
 
-/* Email input */
+
 .input-email {
     margin-top: 20px;
     display: flex;
@@ -131,6 +136,9 @@
     font-size: 16px;
     background-color: rgba(20, 20, 20, 0.7);
     font-weight: 400;
+    line-height: 1.5;
+    font-family: unset;
+    caret-color: rgb(255, 255, 255);
 }
 
 .input-email button {
@@ -145,33 +153,107 @@
 }
 
 .input-email button:hover {
-    background: #f40612;
+    background: #c8000a;
+    scale: 1.05;
 }
 
-.trending-section {
-  position: relative;
-  background: black;
-  padding: 60px 60px 40px;
-  color: white;
+/* ===== TRENDING SECTION FIX ===== */
+
+.trending {
+    position: relative;
+    padding: 20px 0 30px; /* REDUCED */
+    color: white;
+    background-color: black;
 }
 
-/* Curved top line */
-.trending-section::before {
-  content: "";
-  position: absolute;
-  top: -40px;
-  left: 0;
-  width: 100%;
-  height: 80px;
-
-  background: linear-gradient(
-    90deg,
-    #b0063a,
-    #e50914,
-    #b0063a
-  );
-
-  border-bottom-left-radius: 100% 60px;
-  border-bottom-right-radius: 100% 60px;
+/* Curved line stays the same */
+.trending::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    border-top-left-radius: 110% 40px;
+    border-top-right-radius: 110% 40px;
+    background: linear-gradient(
+        to right,
+        rgba(33, 13, 22, 1) 16%,
+        rgba(184, 40, 105, 1),
+        rgba(229, 9, 20, 1),
+        rgba(184, 40, 105, 1),
+        rgba(33, 13, 22, 1) 84%
+    );
 }
 
+.trending::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    border-top-left-radius: 110% 40px;
+    border-top-right-radius: 110% 40px;
+    background:
+      radial-gradient(
+        50% 500% at 50% -420%,
+        rgba(64, 97, 231, 0.4) 80%,
+        rgba(0, 0, 0, 0.1) 100%
+      ),
+      black;
+}
+
+
+.trending h1 {
+    position: relative;
+    margin: 0 0 12px 80px;
+    bottom: -30px;
+    left: 50px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.movie-row {
+    position: relative;
+    display: flex;
+    gap: 50px;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    top: -86px;
+    margin-left: 147px;
+    margin-right: 160px;
+    padding: 0px 0 20px 19px;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+
+.movie img {
+    width: 180px;
+    height: 252px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.movie img:hover {
+    transform: scale(1.05);
+}
+
+
+.rank {
+    position: relative;
+    bottom: -260px;
+    left: -20px;
+    font-size: 7rem;
+    font-weight: 700;
+    color: black;
+    -webkit-text-stroke: 2px white;
+    text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 3;
+}
