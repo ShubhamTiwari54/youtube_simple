@@ -1,35 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NETFLIX</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix India – Watch Shows Online, Watch Movies Online</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="main">
-        <nav style="background-color: red;">
-            <span class="logo">
-                <img src="img/logo.svg" width="53">
-            </span>
-        
-            
-            <div class="sign-in">
-                <button>English</button>
-                <button>Sign In</button>
-            </div>
+  <div class="main">
+    <!-- Dark overlay -->
+    <div class="box"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <span class="logo">
+          <img src="img/Logonetflix.png" alt="Netflix">
+        </span>
+
+        <div class="sign-in">
+          <select>
+            <option>English</option>
+            <option>Hindi</option>
+          </select>
+          <button>Sign In</button>
         </div>
-        <div class="box">
-            <div class="intro">
-                <p id="h1">Enjoy big movies, hit series and more from ₹149/month</p>
-                <p id="h2">Join today, Cancel anytime.</p>
-                <p id="h3">Ready to watch? Enter your Email to create or restart your membership</p>
-                <div class="input-email">
-                    <input type="email" placeholder ="Email address">
-                    <button>Get Started ></button>
-                </div>
-            </div>
-        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Content -->
+    <div class="intro">
+      <p id="h1">Unlimited movies,<br>shows, and more</p>
+      <p id="h2">Starts at ₹149. Cancel at any time.</p>
+      <p id="h3">Ready to watch? Enter your email to create or restart your membership.</p>
+
+      <div class="input-email">
+        <input type="email" placeholder="Email address">
+        <button>Get Started ></button>
+      </div>
     </div>
+  </div>
+
+  <section class="trending">
+    <h1> Trending Now</h1>
+    <div class="movie-row">
+        <div class="movie"></div>
+        <div class="movie"></div>
+        <div class="movie"></div>
+        <div class="movie"></div>
+        <div class="movie"></div>
+    </div>
+  </section>
 </body>
 </html>

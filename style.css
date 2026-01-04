@@ -1,35 +1,177 @@
-*{
+/* Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.main{
 
-    background-image: url(img/banner.jpg);
-    height: 80vh;
-    width: auto;
-    background-position: center center ;
-    background-repeat: no-repeat;
+/* Background */
+.main {
+    position: relative;
+    height: 100vh;
+    background: url("img/banner.jpg") center/cover no-repeat;
 }
+
+/* Dark overlay */
 .main .box {
-    height: 80vh;
-    width: auto;
-    opacity: 0.44;
-    background-color: black;
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
 
+/* Navbar */
+.navbar {
+    position: relative;
+    z-index: 2;
 }
-.intro{
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-}
-nav{
-    max-width: 80vw;
-    margin: auto;
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 70px;
+    padding: 0 24px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
 }
 
-   
+/* Logo */
+.logo img {
+    width: 150px;
+}
+
+/* Right side */
+.sign-in {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sign-in select {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 6px 10px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-size: medium;
+}
+.sign-in select:hover{
+    box-shadow: ;
+}
+
+.sign-in option {
+    color: black;
+}
+
+.sign-in button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 7px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight:400;
+    font-size: medium;
+
+}
+
+.sign-in button:hover {
+    background-color: #cc000a;
+}
+
+/* Hero text */
+.intro {
+    position: relative;
+    z-index: 2;
+
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+    gap: 14px;
+}
+
+/* Reset paragraph margins */
+.intro p {
+    margin: 0;
+}
+
+/* Text sizes */
+#h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+#h2 {
+    font-size: 1.5rem;
+}
+
+#h3 {
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+
+/* Email input */
+.input-email {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.input-email input {
+    padding: 14px;
+    width: 350px;
+    font-size: 16px;
+    background-color: rgba(20, 20, 20, 0.7);
+    font-weight: 400;
+}
+
+.input-email button {
+    padding: 14px 24px;
+    background: #e50914;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 24px;
+    font-family: unset;
+}
+
+.input-email button:hover {
+    background: #f40612;
+}
+
+.trending-section {
+  position: relative;
+  background: black;
+  padding: 60px 60px 40px;
+  color: white;
+}
+
+/* Curved top line */
+.trending-section::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+
+  background: linear-gradient(
+    90deg,
+    #b0063a,
+    #e50914,
+    #b0063a
+  );
+
+  border-bottom-left-radius: 100% 60px;
+  border-bottom-right-radius: 100% 60px;
+}
+
