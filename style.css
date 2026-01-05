@@ -157,16 +157,15 @@ html {
     scale: 1.05;
 }
 
-/* ===== TRENDING SECTION FIX ===== */
+
 
 .trending {
     position: relative;
-    padding: 20px 0 30px; /* REDUCED */
+    padding: 20px 0 30px;
     color: white;
     background-color: black;
 }
 
-/* Curved line stays the same */
 .trending::before {
     content: '';
     position: absolute;
@@ -177,14 +176,12 @@ html {
     height: 40px;
     border-top-left-radius: 110% 40px;
     border-top-right-radius: 110% 40px;
-    background: linear-gradient(
-        to right,
-        rgba(33, 13, 22, 1) 16%,
-        rgba(184, 40, 105, 1),
-        rgba(229, 9, 20, 1),
-        rgba(184, 40, 105, 1),
-        rgba(33, 13, 22, 1) 84%
-    );
+    background: linear-gradient(to right,
+            rgba(33, 13, 22, 1) 16%,
+            rgba(184, 40, 105, 1),
+            rgba(229, 9, 20, 1),
+            rgba(184, 40, 105, 1),
+            rgba(33, 13, 22, 1) 84%);
 }
 
 .trending::after {
@@ -198,12 +195,10 @@ html {
     border-top-left-radius: 110% 40px;
     border-top-right-radius: 110% 40px;
     background:
-      radial-gradient(
-        50% 500% at 50% -420%,
-        rgba(64, 97, 231, 0.4) 80%,
-        rgba(0, 0, 0, 0.1) 100%
-      ),
-      black;
+        radial-gradient(50% 500% at 50% -420%,
+            rgba(64, 97, 231, 0.4) 80%,
+            rgba(0, 0, 0, 0.1) 100%),
+        black;
 }
 
 
@@ -216,13 +211,14 @@ html {
     font-size: 1.5rem;
     font-weight: 500;
 }
+
 .movie-row {
     position: relative;
     display: flex;
     gap: 50px;
     flex-direction: row;
     overflow-y: hidden;
-    overflow-x: scroll;
+    overflow-x: hidden;
     top: -86px;
     margin-left: 147px;
     margin-right: 160px;
@@ -256,4 +252,188 @@ html {
     text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
     pointer-events: none;
     z-index: 3;
+}
+.trending-arrow {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 96px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 3rem;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+}
+.trending-arrow:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.trending-arrow.left {
+  left: 40px;
+}
+
+.trending-arrow.right {
+  right: 40px;
+}
+
+.reason {
+    position: relative;
+    background-color: black;
+    color: white;
+    padding: 20px 0 30px;
+
+}
+
+.reason h1 {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0 0 12px 80px;
+    left: 50px;
+    top: -100px;
+
+}
+
+.second {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-left: 147px;
+    margin-right: 160px;
+    padding: 0px 0 20px 19px;
+}
+
+.a {
+    position: relative;
+    border: #1b1f3b;
+    top: -95px;
+    border-radius: 10px;
+    width: 292.2px;
+    height: 266.4px;
+    background: radial-gradient(circle at bottom right,
+            #3a1f4f 0%,
+            #2b1b3f 40%,
+            #1b1f3b 75%);
+    ;
+
+}
+
+.b {
+    width: 260.2px;
+    height: 55.2px;
+    font-family: unset;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 20px 0px 0px 20px;
+}
+
+.bb {
+    width: 260.2px;
+    height: 55.2px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: unset;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 20px 0px 0px 20px;
+
+}
+
+/* FAQ section container */
+.freq {
+  background: black;
+  color: white;
+  padding: 40px 0 60px;
+}
+
+/* FAQ heading */
+.freq h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 147px;
+  margin-bottom: 20px;
+}
+
+/* FAQ list wrapper */
+.faq {
+  margin-left: 147px;
+  margin-right: 160px;
+}
+
+/* remove default list styling */
+.faq ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* each FAQ item */
+.q {
+  background: rgb(45, 45, 45);
+  margin-bottom: 10px;
+}
+
+/* question row */
+.faq-question {
+  width: 100%;
+  background: rgb(45, 45, 45);
+  color: white;
+  border: none;
+  padding: 24px 28px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-align: left;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+/* hover effect like Netflix */
+.faq-question:hover {
+  background: rgb(65, 65, 65);
+}
+
+/* plus icon */
+.icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+/* answer (hidden by default) */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: rgb(45, 45, 45);
+
+  padding: 0 28px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+
+  transition: max-height 0.35s ease;
+}
+
+/* open state */
+.q.active .faq-answer {
+  max-height: 300px;
+  padding-bottom: 24px;
+}
+
+/* rotate + to × */
+.q.active .icon {
+  transform: rotate(45deg);
 }
