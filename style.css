@@ -321,7 +321,7 @@ html {
             #3a1f4f 0%,
             #2b1b3f 40%,
             #1b1f3b 75%);
-    ;
+    
 
 }
 
@@ -393,11 +393,9 @@ html {
   font-size: 1.4rem;
   font-weight: 400;
   text-align: left;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   cursor: pointer;
 }
 
@@ -418,12 +416,10 @@ html {
   max-height: 0;
   overflow: hidden;
   background: rgb(45, 45, 45);
-
   padding: 0 28px;
   font-size: 1.1rem;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.8);
-
   transition: max-height 0.35s ease;
 }
 
@@ -431,9 +427,143 @@ html {
 .q.active .faq-answer {
   max-height: 300px;
   padding-bottom: 24px;
+transition-duration: 0.5s;
+transition-timing-function: ease;
 }
 
 /* rotate + to × */
 .q.active .icon {
   transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .nav-container {
+    padding: 0 16px;
+  }
+
+  .logo img {
+    width: 110px;
+  }
+
+  /* HERO SECTION */
+  #h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  #h2 {
+    font-size: 1.2rem;
+  }
+
+  #h3 {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .input-email {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .input-email input {
+    width: 100%;
+  }
+
+  .input-email button {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  /* TRENDING SECTION */
+  .trending h1 {
+    margin-left: 20px;
+    left: 0;
+    bottom: 0;
+  }
+
+  .movie-row {
+    margin: 0;
+    padding: 20px;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .movie img {
+    width: 130px;
+    height: 190px;
+  }
+
+  .rank {
+    font-size: 4rem;
+    bottom: -190px;
+    left: -10px;
+  }
+
+  /* ARROWS HIDE ON MOBILE */
+  .trending-arrow {
+    display: none;
+  }
+
+  /* REASONS SECTION */
+  .reason h1 {
+    margin-left: 20px;
+    left: 0;
+    top: 0;
+  }
+
+  .second {
+    flex-direction: column;
+    margin: 0;
+    padding: 0 16px;
+  }
+
+  .a {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .b,
+  .bb {
+    width: auto;
+  }
+
+  /* FAQ SECTION */
+  .freq h1 {
+    margin-left: 16px;
+  }
+
+  .faq {
+    margin: 0 16px;
+  }
+
+  .faq-question {
+    font-size: 1.1rem;
+    padding: 18px;
+  }
+
+  .faq-answer {
+    font-size: 1rem;
+  }
+}
+
+/* EXTRA SMALL DEVICES */
+@media (max-width: 480px) {
+
+  #h1 {
+    font-size: 1.9rem;
+  }
+
+  .movie img {
+    width: 120px;
+    height: 175px;
+  }
+
+  .rank {
+    font-size: 3.5rem;
+  }
 }
